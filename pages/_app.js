@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/globals.css';
+import configureStore from '../redux/configureStore';
+import { Provider } from 'react-redux';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+    return (
+        <Provider store={configureStore()}>
+            <Component {...pageProps} />
+        </Provider>
+    );
 }
 
-export default MyApp
+export default MyApp;
