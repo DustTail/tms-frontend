@@ -1,0 +1,71 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:@next/eslint-plugin-next/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "spread": true
+        },
+        "ecmaVersion": 2021,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint", "@next/eslint-plugin-next"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "linkComponents": ["Link", { "name": "Link", "linkAttribute": "href" }]
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "object-curly-spacing": ["warn", "always"],
+        "no-shadow": "error",
+        "no-var": "error",
+        "no-empty": "error",
+        "no-empty-function": "error",
+        "eol-last": "warn",
+        "object-shorthand": ["warn", "always"],
+        "prefer-const": "warn",
+        "prefer-arrow-callback": "warn",
+        "space-before-blocks": "warn",
+        "no-trailing-spaces": ["error"],
+        "no-multiple-empty-lines": [
+            "warn",
+            {
+                "max": 1
+            }
+        ],
+        "space-before-function-paren": ["warn", "never"],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "only-multiline",
+                "objects": "only-multiline",
+                "imports": "ignore",
+                "exports": "ignore",
+                "functions": "ignore"
+            }
+        ]
+    }
+}
