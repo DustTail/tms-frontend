@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
 import configureStore from '../redux/configureStore';
 import { Provider } from 'react-redux';
